@@ -1,6 +1,6 @@
 # Jump n Run Game
 
-## Spielidee
+## Game-concept
 
 * 2D-Game 
 * Score
@@ -8,36 +8,36 @@
 * Spielfeld bewegt sich automatisch nach links
 
 
-### Project Time Frame
+## Project Time Frame
 4 weeks, 80 hours worktime
 
-### Prepared by
+## Prepared by
 Teresa Holzer
 Lara Pichler
 Sarah Reichl
 Julia Friedl
 
-### Attached documentation
+## Attached documentation
 https://github.com/sarahreichl/jumpnrun
 
-### Summary
+## Summary
 It's a minigame where you can play a charactere that can jump and duck over / under enemies. You can reach a Highscore. The surroundings move automatically from right to left, while you always stay at the same place. Overall the game has a pixelgraphic-design. The main charactere as well as the enemies are pixelgraphics.
 
-#### How the team will be organised
+### How the team will be organised
 Communication: Discord, Github
 Changes: Github / LiveShare
 
-#### What tools will be used
+### What tools will be used
 Netbeans, draw.io, VS Code
 
 
-### Liste der Aufgaben
+## Liste der Aufgaben
 * Character (maybe animated)
 * Obstacles (two different kinds of them)
 * Movement (of the character)
 * Background (Movement and apperance)
 
-### Timeline
+## Timeline
 1. Character and it's movement (12.5)
 2. Background and it'a movement (19.5)
 3. Obstacles and the character interacting with the background, obstacles, etc.(26.5)
