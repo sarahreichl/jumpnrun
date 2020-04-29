@@ -7,7 +7,6 @@
 * Charakter kann nach oben springen oder runter bücken
 * Spielfeld bewegt sich automatisch nach links
 
-## Section 4
 
 ### Project Time Frame
 4 weeks, 80 hours worktime
@@ -31,7 +30,6 @@ Changes: Github / LiveShare
 #### What tools will be used
 Netbeans, draw.io, VS Code
 
-## Section 3
 
 ### Liste der Aufgaben
 * Character (maybe animated)
