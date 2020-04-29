@@ -19,6 +19,7 @@ Julia Friedl
 
 ## Attached documentation
 https://github.com/sarahreichl/jumpnrun
+https://drive.google.com/file/d/1l2iusceAXwZ07nY1PepZ5Lbs6i-A-CSs/view?usp=sharing
 
 ## Summary
 It's a minigame where you can play a charactere that can jump and duck over / under enemies. You can reach a Highscore. The surroundings move automatically from right to left, while you always stay at the same place. Overall the game has a pixelgraphic-design. The main charactere as well as the enemies are pixelgraphics.
