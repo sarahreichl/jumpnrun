@@ -42,5 +42,5 @@ Netbeans, draw.io, VS Code
 1. Character and it's movement (12.5)
 2. Background and it'a movement (19.5)
 3. Obstacles and the character interacting with the background, obstacles, etc.(26.5)
-4. Death Screen and Score (2.5)
+4. Death Screen and Score (2.6)
 
