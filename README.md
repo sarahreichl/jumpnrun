@@ -4,8 +4,8 @@
 
 * 2D-Game 
 * Score
-* Charakter kann nach oben springen oder runter bücken
-* Spielfeld bewegt sich automatisch nach links
+* Character can jump and duck
+* Surrounding moves to the left
 
 
 ## Project Time Frame
@@ -31,7 +31,7 @@ Changes: Github / LiveShare
 Netbeans, draw.io, VS Code
 
 
-## Liste der Aufgaben
+## List of tasks
 * Character (maybe animated)
 * Obstacles (two different kinds of them)
 * Movement (of the character)
