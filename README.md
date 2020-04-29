@@ -39,8 +39,9 @@ Netbeans, draw.io, VS Code
 * Background (Movement and apperance)
 
 ## Timeline
-1. Character and it's movement (12.5)
-2. Background and it'a movement (19.5)
-3. Obstacles and the character interacting with the background, obstacles, etc.(26.5)
-4. Death Screen and Score (2.5)
+1. Character and it's movement (19.5) (Lara Alina Pichler, Sarah Reichl)
+2. Background and it'a movement (19.5) (Teresa Holzer, Julia Fiedl)
+3. Obstacles (Teresa Holzer, Julia Friedl) (19.5)
+4. The character interacting with the background, obstacles, etc.(26.5)
+5. Death Screen and Score (2.6)
 
