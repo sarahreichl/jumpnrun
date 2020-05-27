@@ -11,7 +11,8 @@ import com.badlogic.gdx.graphics.GL20;
 
 public class Character {
     float y;
-
+    public float characterY;
+    public float characterX;
     SpriteBatch batch;
     Texture img;
     TextureRegion[] animationFrames;
@@ -59,12 +60,22 @@ public class Character {
         }
         if(Gdx.input.isKeyPressed(Input.Keys.DOWN)){
             if(y>135){
-                y -= 5;
+                y -= 5f;
             }
         }
-
+        characterY = y;
+        characterX = x;
 
         batch.draw((TextureRegion) animation.getKeyFrame(elapsedTime, true), x, y, 50, 50);
 
+
     }
+
+    public float getCharacterY(){
+        return characterY;
+    }
+    public float getCharacterX(){
+        return characterX;
+    }
+
 }

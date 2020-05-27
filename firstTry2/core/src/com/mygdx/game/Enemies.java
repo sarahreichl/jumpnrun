@@ -18,6 +18,8 @@ public class Enemies {
     int cloudMove = 0;
     Texture enemy1;
     Texture enemy2;
+    public float enemyX;
+    public float enemyY;
 
 
     public Enemies(){
@@ -51,6 +53,8 @@ public class Enemies {
         if (enemy12 != 2 && x == 1) {
             paddlePosition1();
             enemy12 = 1;
+            enemyX = enemyPosition.x;
+            enemyY = enemyPosition.y;
             if (enemyPosition.x == 0 - enemyWidth) {
                 enemy12 = 0;
             }
@@ -59,6 +63,8 @@ public class Enemies {
         if(enemy12 != 1 && x == 2) {
             paddlePosition2();
             enemy12 = 2;
+            enemyX = enemy2Position.x;
+            enemyY = enemy2Position.y;
             if (enemy2Position.x == 0 - enemyWidth) {
                 enemy12 = 0;
             }
@@ -79,5 +85,13 @@ public class Enemies {
         if(j < -5 - enemyWidth){
             j = Gdx.graphics.getWidth() - enemyWidth;
         }
+    }
+
+    public float getEnemyX(){
+        return enemyX;
+    }
+
+    public float getEnemyY(){
+        return enemyY;
     }
 }

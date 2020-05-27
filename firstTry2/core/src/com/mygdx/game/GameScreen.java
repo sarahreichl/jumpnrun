@@ -26,13 +26,18 @@ public class GameScreen extends ScreenAdapter {
 
         game.batch.begin();
 
-        // scrolling Background erzeugen
+        // scrolling Background erzeugen (Teresa)
         game.scrollingBackground.updateAndRender(delta, game.batch);
-        // Enemys und Wolken erzeugen
+        // charcter erzeugen (Sarah)
         game.character.updateAndRender(game.batch);
+        // Enemies und Wolken erzeugen (Teresa)
         game.enemies.updateAndRender(game.batch);
 
         game.batch.end();
+        System.out.println(game.character.getCharacterY());
+//        System.out.println(game.enemies.getEnemyX());
+//        System.out.println(game.enemies.getEnemyY());
+//        System.out.println(game.character.getCharacterX());
 
     }
 
