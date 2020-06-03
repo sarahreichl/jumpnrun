@@ -31,13 +31,19 @@ public class GameScreen extends ScreenAdapter {
         // charcter erzeugen (Sarah)
         game.character.updateAndRender(game.batch);
         // Enemies und Wolken erzeugen (Teresa)
-        game.enemies.updateAndRender(game.batch);
+        game.enemies.updateAndRender(delta, game.batch);
 
         game.batch.end();
-        System.out.println(game.character.getCharacterY());
+//        System.out.println(game.character.getCharacterY());
 //        System.out.println(game.enemies.getEnemyX());
 //        System.out.println(game.enemies.getEnemyY());
 //        System.out.println(game.character.getCharacterX());
+
+        if(Math.abs(game.enemies.getEnemyY()-game.character.getCharacterY()) < 30 && Math.abs(game.enemies.getEnemyX()-game.character.getCharacterX()) < 30){
+            System.out.println("Y and X say yes");
+        }
+
+
 
     }
 

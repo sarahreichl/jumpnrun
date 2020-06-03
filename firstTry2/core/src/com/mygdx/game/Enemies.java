@@ -25,13 +25,13 @@ public class Enemies {
     public Enemies(){
         enemyPosition = new Vector2(Gdx.graphics.getWidth(), 160.0f);
         enemy2Position = new Vector2(Gdx.graphics.getWidth() , 190.0f);
-        clouds = new Texture("clouds.png");
+        clouds = new Texture("clouds4.gif");
         enemy1 = new Texture("enemy2.png");
         enemy2 = new Texture("enemy3.png");
     }
 
-    public void updateAndRender(SpriteBatch batch){
-        movement();
+    public void updateAndRender(float delta, SpriteBatch batch){
+        movement(delta);
 
         if(Gdx.graphics.getWidth() - Gdx.graphics.getWidth()/4 - cloudMove < 0 - 300 ){
             cloudMove = 0;
@@ -46,43 +46,46 @@ public class Enemies {
     }
 
     //Paddlesbewegen
-    public void movement(){
+    public void movement(float deltaTime){
 
-        int x = (int) (Math.random() * 2 +1);
-
+        int x = (int) (Math.random()*2 +1);
         if (enemy12 != 2 && x == 1) {
-            paddlePosition1();
+            paddlePosition1(deltaTime);
             enemy12 = 1;
             enemyX = enemyPosition.x;
             enemyY = enemyPosition.y;
-            if (enemyPosition.x == 0 - enemyWidth) {
+            if (enemyPosition.x < 0 - enemyWidth) {
                 enemy12 = 0;
             }
-
         }
         if(enemy12 != 1 && x == 2) {
-            paddlePosition2();
+            paddlePosition2(deltaTime);
             enemy12 = 2;
             enemyX = enemy2Position.x;
             enemyY = enemy2Position.y;
-            if (enemy2Position.x == 0 - enemyWidth) {
+            if (enemy2Position.x < 0 - enemyWidth) {
                 enemy12 = 0;
             }
+
         }
+
+
+
+
     }
 
     //  Einzelne Hindernisse erzeuegen
-    public void paddlePosition1(){
+    public void paddlePosition1(float deltaTime){
         enemyPosition.x = i;
-        i -= 5;
-        if(i == -5 - enemyWidth){
+        i -= 400 * deltaTime;
+        if(i < -400 - enemyWidth){
             i = Gdx.graphics.getWidth() - enemyWidth;
         }
     }
-    public void paddlePosition2(){
+    public void paddlePosition2(float deltaTime){
         enemy2Position.x = j;
-        j -= 5;
-        if(j < -5 - enemyWidth){
+        j -= 400 * deltaTime;
+        if(j < -400 - enemyWidth){
             j = Gdx.graphics.getWidth() - enemyWidth;
         }
     }

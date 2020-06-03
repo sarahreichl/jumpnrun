@@ -17,10 +17,10 @@ public class ScrollingBackground {
     float imageScale;
 
     public ScrollingBackground() {
-        backgroundImage = new Texture("background2.jpg");
+        backgroundImage = new Texture(Gdx.files.internal("background11a.jpg"));
         x1 = 0;
         x2 = Gdx.graphics.getWidth();
-        imageScale = 0;
+        imageScale = 1;
         speed = 0;
         goalSpeed = DEFAULT_SPEED;
     }
