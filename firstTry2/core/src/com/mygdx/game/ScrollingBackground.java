@@ -49,6 +49,7 @@ public class ScrollingBackground {
         }
         batch.draw(backgroundImage, x1, 0, Gdx.graphics.getWidth() * imageScale, Gdx.graphics.getHeight());
         batch.draw(backgroundImage, x2, 0, Gdx.graphics.getWidth() * imageScale, Gdx.graphics.getHeight());
+
     }
 
 

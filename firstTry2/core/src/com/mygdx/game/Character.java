@@ -1,12 +1,18 @@
 package com.mygdx.game;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 
 
 public class Character {
@@ -17,6 +23,9 @@ public class Character {
     Texture img;
     TextureRegion[] animationFrames;
     Animation animation;
+
+
+
 
     float elapsedTime;
 
@@ -40,6 +49,9 @@ public class Character {
         }
 
         animation = new Animation(1f/4f, animationFrames);
+
+
+
     }
 
     public void updateAndRender(SpriteBatch batch){
@@ -67,7 +79,6 @@ public class Character {
         characterX = x;
 
         batch.draw((TextureRegion) animation.getKeyFrame(elapsedTime, true), x, y, 50, 50);
-
 
     }
 

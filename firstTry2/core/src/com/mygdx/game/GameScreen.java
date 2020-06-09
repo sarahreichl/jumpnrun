@@ -4,13 +4,16 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.math.Vector2;
 
 public class GameScreen extends ScreenAdapter {
     MyGdxGame game;
 
+
     public GameScreen(MyGdxGame game) {
         this.game = game;
     }
+
 
 
     @Override
@@ -28,19 +31,21 @@ public class GameScreen extends ScreenAdapter {
 
         // scrolling Background erzeugen (Teresa)
         game.scrollingBackground.updateAndRender(delta, game.batch);
-        // charcter erzeugen (Sarah)
+        // character erzeugen (Sarah)
         game.character.updateAndRender(game.batch);
         // Enemies und Wolken erzeugen (Teresa)
         game.enemies.updateAndRender(delta, game.batch);
 
         game.batch.end();
-//        System.out.println(game.character.getCharacterY());
-//        System.out.println(game.enemies.getEnemyX());
-//        System.out.println(game.enemies.getEnemyY());
-//        System.out.println(game.character.getCharacterX());
+
 
         if(Math.abs(game.enemies.getEnemyY()-game.character.getCharacterY()) < 30 && Math.abs(game.enemies.getEnemyX()-game.character.getCharacterX()) < 30){
-            System.out.println("Y and X say yes");
+            System.out.println("x and y say yes");
+            game.enemies.setI(Gdx.graphics.getWidth());
+            game.enemies.setJ(Gdx.graphics.getWidth());
+            game.enemies.setSpeed(400);
+            game.setScreen(new endScreen(game));
+
         }
 
 
@@ -50,7 +55,7 @@ public class GameScreen extends ScreenAdapter {
 
     @Override
     public void dispose() {
-        game.batch.dispose();
+
     }
 
     @Override

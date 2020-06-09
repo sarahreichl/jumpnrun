@@ -1,9 +1,10 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Vector2;
 
 public class Enemies {
@@ -20,6 +21,9 @@ public class Enemies {
     Texture enemy2;
     public float enemyX;
     public float enemyY;
+    int score = 0;
+    BitmapFont scoreFont;
+    int speed = 400;
 
 
     public Enemies(){
@@ -28,20 +32,30 @@ public class Enemies {
         clouds = new Texture("clouds4.gif");
         enemy1 = new Texture("enemy2.png");
         enemy2 = new Texture("enemy3.png");
+
+        scoreFont = new BitmapFont();
+        scoreFont.setColor(Color.WHITE);
     }
 
     public void updateAndRender(float delta, SpriteBatch batch){
+
+        if (Math.abs(enemyPosition.x - 105) < 3 || Math.abs(enemy2Position.x - 105) <3) {
+            score++;
+            speed+= 50;
+        }
         movement(delta);
 
         if(Gdx.graphics.getWidth() - Gdx.graphics.getWidth()/4 - cloudMove < 0 - 300 ){
             cloudMove = 0;
         }
 
+
         batch.draw(clouds, Gdx.graphics.getWidth() - cloudMove, (Gdx.graphics.getHeight() - 200), 150, 100);
         cloudMove += 1;
 
         batch.draw(enemy1, enemyPosition.x, enemyPosition.y, enemyWidth, enemyLength);
         batch.draw(enemy2, enemy2Position.x, enemy2Position.y, enemyWidth, enemyLength);
+        scoreFont.draw(batch, "score: "+ score, Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-scoreFont.getCapHeight() );
 
     }
 
@@ -63,13 +77,11 @@ public class Enemies {
             enemy12 = 2;
             enemyX = enemy2Position.x;
             enemyY = enemy2Position.y;
-            if (enemy2Position.x < 0 - enemyWidth) {
+            if (enemy2Position.x < 0 - enemyWidth ) {
                 enemy12 = 0;
             }
 
         }
-
-
 
 
     }
@@ -77,16 +89,16 @@ public class Enemies {
     //  Einzelne Hindernisse erzeuegen
     public void paddlePosition1(float deltaTime){
         enemyPosition.x = i;
-        i -= 400 * deltaTime;
-        if(i < -400 - enemyWidth){
-            i = Gdx.graphics.getWidth() - enemyWidth;
+        i -= speed * deltaTime;
+        if(i < -speed ){
+            i = Gdx.graphics.getWidth();
         }
     }
     public void paddlePosition2(float deltaTime){
         enemy2Position.x = j;
-        j -= 400 * deltaTime;
-        if(j < -400 - enemyWidth){
-            j = Gdx.graphics.getWidth() - enemyWidth;
+        j -= speed * deltaTime;
+        if(j < -speed ){
+            j = Gdx.graphics.getWidth();
         }
     }
 
@@ -97,4 +109,25 @@ public class Enemies {
     public float getEnemyY(){
         return enemyY;
     }
+
+    public void setI(float i) {
+        this.i = i;
+    }
+
+    public void setJ(float j) {
+        this.j = j;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
 }
+
