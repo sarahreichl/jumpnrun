@@ -25,7 +25,9 @@ public class Enemies {
     BitmapFont scoreFont;
     int speed = 400;
 
-
+    /**
+     * - einfügen der Bilder für Enemies und Wolken im Hintergrund
+     */
     public Enemies(){
         enemyPosition = new Vector2(Gdx.graphics.getWidth(), 160.0f);
         enemy2Position = new Vector2(Gdx.graphics.getWidth() , 190.0f);
@@ -37,6 +39,10 @@ public class Enemies {
         scoreFont.setColor(Color.WHITE);
     }
 
+    /**
+     * @param delta
+     * @param batch
+     */
     public void updateAndRender(float delta, SpriteBatch batch){
 
         if (Math.abs(enemyPosition.x - 105) < 3 || Math.abs(enemy2Position.x - 105) <3) {
@@ -60,6 +66,11 @@ public class Enemies {
     }
 
     //Paddlesbewegen
+
+    /**
+     * - betimmt bewegung der enemies und Wolken
+     * @param deltaTime
+     */
     public void movement(float deltaTime){
 
         int x = (int) (Math.random()*2 +1);
@@ -87,6 +98,12 @@ public class Enemies {
     }
 
     //  Einzelne Hindernisse erzeuegen
+
+    /**
+     * erzeugt Hindernissse Art 1
+     * beschleunigt diese
+     * @param deltaTime
+     */
     public void paddlePosition1(float deltaTime){
         enemyPosition.x = i;
         i -= speed * deltaTime;
@@ -94,6 +111,11 @@ public class Enemies {
             i = Gdx.graphics.getWidth();
         }
     }
+    /**
+     * erzeugt Hindernissse Art 2
+     * beschleunigt diese
+     * @param deltaTime
+     */
     public void paddlePosition2(float deltaTime){
         enemy2Position.x = j;
         j -= speed * deltaTime;

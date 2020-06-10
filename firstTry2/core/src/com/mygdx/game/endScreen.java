@@ -14,6 +14,12 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 public class endScreen implements Screen {
     private Stage stage;
     private Game game;
+
+    /**
+     * - legt das design des Endgames fest
+     * - generiert button zum wiederholen
+     * @param game
+     */
     public endScreen(MyGdxGame game) {
         this.game = game;
         stage = new Stage();

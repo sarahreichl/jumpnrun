@@ -1,7 +1,9 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 
@@ -12,9 +14,24 @@ public class MyGdxGame extends Game {
 	public Enemies enemies;
 	public Character character;
 	public SpriteBatch batch;
-	
+
+	Sound music;
+
+	/**
+	 * Methode die:
+	 * - scrollingBackground erstellt
+	 * - enemies generiert
+	 * - character generiert
+	 * -spielt musik
+	 */
 	@Override
 	public void create () {
+
+		music = Gdx.audio.newSound(Gdx.files.internal("starShoppingInstrumental.mp3"));
+		//music.setLooping(true);
+		music.loop();
+		//sound.dispose();
+
 		batch = new SpriteBatch();
 		this.setScreen(new startScreen(this));
 		this.scrollingBackground = new ScrollingBackground();

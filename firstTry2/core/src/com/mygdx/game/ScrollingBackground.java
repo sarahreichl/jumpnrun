@@ -16,6 +16,9 @@ public class ScrollingBackground {
     int goalSpeed;
     float imageScale;
 
+    /**
+     * - fügt Hintergrundbild ein
+     */
     public ScrollingBackground() {
         backgroundImage = new Texture(Gdx.files.internal("background11a.jpg"));
         x1 = 0;
@@ -25,6 +28,11 @@ public class ScrollingBackground {
         goalSpeed = DEFAULT_SPEED;
     }
 
+    /**
+     * - für Bewegung des Hintergrunds
+     * @param deltaTime
+     * @param batch
+     */
     public void updateAndRender(float deltaTime, SpriteBatch batch) {
         if (speed < goalSpeed) {
             speed += GOAL_REACH_ACCELERATION * deltaTime;

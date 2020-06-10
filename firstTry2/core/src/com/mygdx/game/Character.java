@@ -23,14 +23,13 @@ public class Character {
     Texture img;
     TextureRegion[] animationFrames;
     Animation animation;
-
-
-
-
     float elapsedTime;
 
+    /**
+     * - legt y Koordinate fest
+     * - unterteilt Bild in 4 TextureRegions die in Array gespeichert werden und durchwechseln
+     */
     public Character(){
-
 
         this.y = 175;
 
@@ -54,6 +53,11 @@ public class Character {
 
     }
 
+    /**
+     * - Mit dieser Methode macht die Steurung des Characters (y-Achse) möglich
+     * - Mittels: pfeiltasten
+     * @param batch
+     */
     public void updateAndRender(SpriteBatch batch){
         final int HEIGHT = Gdx.graphics.getHeight();
         final int WIDTH = Gdx.graphics.getWidth();
@@ -65,12 +69,12 @@ public class Character {
         //Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        if(Gdx.input.isKeyPressed(Input.Keys.UP)){
+        if(Gdx.input.isKeyPressed(Input.Keys.UP)||Gdx.input.isKeyPressed(Input.Keys.W)){
             if(HEIGHT-275 > y) {
                 y += 5f;
             }
         }
-        if(Gdx.input.isKeyPressed(Input.Keys.DOWN)){
+        if(Gdx.input.isKeyPressed(Input.Keys.DOWN)||Gdx.input.isKeyPressed(Input.Keys.S)){
             if(y>135){
                 y -= 5f;
             }

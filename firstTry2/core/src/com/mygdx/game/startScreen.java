@@ -13,6 +13,12 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 public class startScreen implements Screen  {
     private Stage stage;
     private Game game;
+
+    /**
+     * - erstellt Startscreen
+     * - erstellt Startbutton
+     * @param game
+     */
     public startScreen(MyGdxGame game){
         this.game = game;
         stage = new Stage();
