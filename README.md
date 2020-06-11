@@ -46,18 +46,18 @@ Netbeans, draw.io, VS Code
 5. Death Screen and Score (2.6)
 
 ## Doc
-* Teresa:
+1. Teresa:
 - Enemies (Obstacles)
 - Background
 - Class diagramm
 - Start Screen
 - End Screen 
 
-* Julia:
+1. Julia:
 - Start Screen
 - End Screen
 
-* Sarah:
+3. Sarah:
 - Character
 - Music
 - Java Doc
