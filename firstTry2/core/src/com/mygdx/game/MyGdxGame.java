@@ -22,7 +22,7 @@ public class MyGdxGame extends Game {
 	 * - scrollingBackground erstellt
 	 * - enemies generiert
 	 * - character generiert
-	 * -spielt musik
+	 * - spielt musik
 	 */
 	@Override
 	public void create () {
