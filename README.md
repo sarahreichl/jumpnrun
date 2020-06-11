@@ -53,9 +53,11 @@ Netbeans, draw.io, VS Code
 - Start Screen
 - End Screen 
 
-1. Julia:
+
+2. Julia:
 - Start Screen
 - End Screen
+
 
 3. Sarah:
 - Character
