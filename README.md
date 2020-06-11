@@ -45,3 +45,20 @@ Netbeans, draw.io, VS Code
 4. The character interacting with the background, obstacles, etc.(26.5)
 5. Death Screen and Score (2.6)
 
+## Doc
+* Teresa:
+- Enemies (Obstacles)
+- Background
+- Class diagramm
+- Start Screen
+- End Screen 
+
+* Julia:
+- Start Screen
+- End Screen
+
+* Sarah:
+- Character
+- Music
+- Java Doc
+
