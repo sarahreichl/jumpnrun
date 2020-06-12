@@ -24,6 +24,7 @@ public class Enemies {
     int score = 0;
     BitmapFont scoreFont;
     int speed = 400;
+    float timeHelper = 0;
 
     /**
      * - einfügen der Bilder für Enemies und Wolken im Hintergrund
@@ -44,12 +45,16 @@ public class Enemies {
      * @param batch
      */
     public void updateAndRender(float delta, SpriteBatch batch){
-
-        if (Math.abs(enemyPosition.x - 105) < 3 || Math.abs(enemy2Position.x - 105) <3) {
-            score++;
-            speed+= 50;
+        timeHelper += Gdx.graphics.getDeltaTime();
+        if(timeHelper > 1) {
+            if (Math.abs(enemyPosition.x - 105) < 15 || Math.abs(enemy2Position.x - 105) < 15) {
+                score++;
+                speed += 50;
+                timeHelper = 0;
+            }
         }
         movement(delta);
+
 
         if(Gdx.graphics.getWidth() - Gdx.graphics.getWidth()/4 - cloudMove < 0 - 300 ){
             cloudMove = 0;
@@ -130,6 +135,14 @@ public class Enemies {
 
     public float getEnemyY(){
         return enemyY;
+    }
+
+    public void setEnemyX(float enemyX) {
+        this.enemyX = enemyX;
+    }
+
+    public void setEnemyY(float enemyY) {
+        this.enemyY = enemyY;
     }
 
     public void setI(float i) {

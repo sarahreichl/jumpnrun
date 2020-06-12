@@ -44,6 +44,8 @@ public class GameScreen extends ScreenAdapter {
             game.enemies.setI(Gdx.graphics.getWidth());
             game.enemies.setJ(Gdx.graphics.getWidth());
             game.enemies.setSpeed(400);
+            game.enemies.setEnemyX(Gdx.graphics.getWidth());
+            game.enemies.setEnemyY(Gdx.graphics.getWidth());
             game.setScreen(new endScreen(game));
 
         }
