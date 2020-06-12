@@ -60,6 +60,7 @@ Netbeans, draw.io, VS Code
 - Class diagramm
 - Start Screen
 - End Screen
+- Score
 - Fixing End Screen
 - Fixing Score
 
@@ -67,6 +68,7 @@ Netbeans, draw.io, VS Code
 
 - Start Screen
 - End Screen
+- Score
 
 3. Sarah:
 
