@@ -83,8 +83,9 @@ Netbeans, draw.io, VS Code
 | elaborate idea              | 05.05 | 15:30-18:00             |
 | Introduction LibGDX         | 12.05 | 15:30-18:00             |
 | Enemies                     | 05.05 | 15:00-18:00             |
-| Scrolling Background        | 12.05 | 15:30-18:30             |
+| Enemies                     | 12.05 | 15:30-18:30             |
 | Character                   | 16.05 | 12:00-14:00 18:00-19:30 |
+| Scrolling Background        | 16.05 | 15:30-18:00             |
 | Start Screen                | 08.06 | 09:00-11:00             |
 | End Screen                  | 08.06 | 11:00-13:00             |
 | Score                       | 08.06 | 13:00-15:00             |
