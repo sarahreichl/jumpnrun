@@ -80,13 +80,15 @@ Netbeans, draw.io, VS Code
 
 | Task                        | Date  | Time        |
 | --------------------------- | ----- | ----------- |
+| elaborate idea              | 05.05 | 15:30-18:00 |
+| Introduction LibGDX         | 12.05 | 15:30-18:00 |
 | Enemies                     | 05.05 | 15:00-18:00 |
 | Scrolling Background        | 12.05 | 15:30-18:00 |
-| Character                   |       |             |
+| Character                   | 16.05 | 12:00-14:00 | 18:00-19:30 |
 | Start Screen                | 08.06 | 09:00-11:00 |
 | End Screen                  | 08.06 | 11:00-13:00 |
 | Score                       | 08.06 | 13:00-14:00 |
 | Fixung End Screen and Score | 12.06 | 09:00-10:00 |
 | Class Diagramm              | 09.06 | 15:30-17:00 |
-| Java Doc                    |       |             |
-| Music                       |       |             |
+| Java Doc                    | 09.06 | 15:30-17:15 |
+| Music                       | 10.06 | 18:00-21:00 |
