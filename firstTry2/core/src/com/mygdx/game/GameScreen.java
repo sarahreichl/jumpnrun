@@ -40,7 +40,6 @@ public class GameScreen extends ScreenAdapter {
 
 
         if(Math.abs(game.enemies.getEnemyY()-game.character.getCharacterY()) < 30 && Math.abs(game.enemies.getEnemyX()-game.character.getCharacterX()) < 30){
-            System.out.println("x and y say yes");
             game.enemies.setI(Gdx.graphics.getWidth());
             game.enemies.setJ(Gdx.graphics.getWidth());
             game.enemies.setSpeed(400);

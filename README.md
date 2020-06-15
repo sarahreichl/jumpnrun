@@ -75,3 +75,9 @@ Netbeans, draw.io, VS Code
 - Character
 - Music
 - Java Doc
+
+## Timeplan
+
+| Task | Time |
+| ---- | ---- |
+
