@@ -78,18 +78,20 @@ Netbeans, draw.io, VS Code
 
 ## Timeplan
 
-| Task                        | Date  | Time                    |
-| --------------------------- | ----- | ----------------------- |
-| elaborate idea              | 05.05 | 15:30-18:00             |
-| Introduction LibGDX         | 12.05 | 15:30-18:00             |
-| Enemies                     | 05.05 | 15:00-18:00             |
-| Enemies                     | 12.05 | 15:30-18:30             |
-| Character                   | 16.05 | 12:00-14:00 18:00-19:30 |
-| Scrolling Background        | 16.05 | 15:30-18:00             |
-| Start Screen                | 08.06 | 09:00-11:00             |
-| End Screen                  | 08.06 | 11:00-13:00             |
-| Score                       | 08.06 | 13:00-15:00             |
-| Fixung End Screen and Score | 12.06 | 09:00-11:00             |
-| Class Diagramm              | 09.06 | 15:30-17:30             |
-| Java Doc                    | 09.06 | 15:30-17:30             |
-| Music                       | 10.06 | 18:00-21:00             |
+| Task                                    | Date  | Time        |
+| --------------------------------------- | ----- | ----------- |
+| elaborate idea                          | 05.05 | 15:30-18:00 |
+| Introduction LibGDX                     | 12.05 | 15:30-18:00 |
+| Enemies                                 | 14.05 | 15:00-18:00 |
+| Enemies                                 | 15.05 | 15:30-18:30 |
+| Character                               | 16.05 | 12:00-14:00 |
+| Character                               | 16.05 | 18:00-19:30 |
+| Scrolling Background                    | 25.05 | 15:30-18:00 |
+| Start Screen                            | 08.06 | 09:00-11:00 |
+| End Screen                              | 08.06 | 11:00-13:00 |
+| Score                                   | 08.06 | 13:00-15:00 |
+| Fixung End Screen and Score             | 12.06 | 09:00-11:00 |
+| Class Diagramm                          | 09.06 | 15:30-17:30 |
+| Java Doc                                | 09.06 | 15:30-17:30 |
+| Music                                   | 10.06 | 18:00-21:00 |
+| Update Scrolling Background and Enemies | 14.06 | 15:00-16:00 |

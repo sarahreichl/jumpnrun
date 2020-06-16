@@ -12,9 +12,10 @@ public class ScrollingBackground {
 
     Texture backgroundImage;
     float x1, x2;
-    int speed;
+    float speed;
     int goalSpeed;
     float imageScale;
+    float updateSpeed = 0;
 
     /**
      * - fügt Hintergrundbild ein
@@ -35,19 +36,18 @@ public class ScrollingBackground {
      */
     public void updateAndRender(float deltaTime, SpriteBatch batch) {
         if (speed < goalSpeed) {
-            speed += GOAL_REACH_ACCELERATION * deltaTime;
+            speed += GOAL_REACH_ACCELERATION * deltaTime + updateSpeed;
             if (speed > goalSpeed) {
-                speed = goalSpeed;
+                speed = goalSpeed + updateSpeed;
             }
         } else if (speed > goalSpeed) {
-            speed -= GOAL_REACH_ACCELERATION * deltaTime;
+            speed -= GOAL_REACH_ACCELERATION * deltaTime + updateSpeed;
             if (speed < goalSpeed) {
-                speed = goalSpeed;
+                speed = goalSpeed + updateSpeed;
             }
         }
         x1 -= speed * deltaTime;
         x2 -= speed * deltaTime;
-
         //Bild ganz links => soll wieder links erscheinen
         if (x1 + Gdx.graphics.getWidth() * imageScale <= 0) {
             x1 = x2 + Gdx.graphics.getWidth() * imageScale;
@@ -57,7 +57,7 @@ public class ScrollingBackground {
         }
         batch.draw(backgroundImage, x1, 0, Gdx.graphics.getWidth() * imageScale, Gdx.graphics.getHeight());
         batch.draw(backgroundImage, x2, 0, Gdx.graphics.getWidth() * imageScale, Gdx.graphics.getHeight());
-
+        updateSpeed += 0.08;
     }
 
 
@@ -67,6 +67,10 @@ public class ScrollingBackground {
 
     public void setSpeed(int goalSpeed) {
         this.goalSpeed = goalSpeed;
+    }
+
+    public void setUpdateSpeed(float updateSpeed) {
+        this.updateSpeed = updateSpeed;
     }
 }
 

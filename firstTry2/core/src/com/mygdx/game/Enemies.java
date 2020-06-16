@@ -49,7 +49,7 @@ public class Enemies {
         if(timeHelper > 1) {
             if (Math.abs(enemyPosition.x - 105) < 15 || Math.abs(enemy2Position.x - 105) < 15) {
                 score++;
-                speed += 50;
+                speed += 30;
                 timeHelper = 0;
             }
         }
