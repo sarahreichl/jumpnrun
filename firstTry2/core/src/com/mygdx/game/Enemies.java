@@ -3,22 +3,21 @@ package com.mygdx.game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 
 public class Enemies {
     Vector2 enemyPosition;
     Vector2 enemy2Position;
     float enemyWidth = 20.0f;
-    float enemyLength = 50.0f;
     float i =  Gdx.graphics.getWidth() - enemyWidth;
     float j = Gdx.graphics.getWidth() - enemyWidth;
     int enemy12 = 0;
     Texture clouds;
     int cloudMove = 0;
-    Texture enemy1;
-    Texture enemy2;
     public float enemyX;
     public float enemyY;
     int score = 0;
@@ -27,6 +26,11 @@ public class Enemies {
     float timeHelper = 0;
     BitmapFont timeFont;
     float time = 0;
+    Texture[] animationFrames;
+    Texture[] animationFrames2;
+    Animation animation;
+    Animation animation2;
+    float elapsedTime;
 
     /**
      * - einfügen der Bilder für Enemies und Wolken im Hintergrund
@@ -35,14 +39,25 @@ public class Enemies {
         enemyPosition = new Vector2(Gdx.graphics.getWidth(), 160.0f);
         enemy2Position = new Vector2(Gdx.graphics.getWidth() , 190.0f);
         clouds = new Texture("clouds4.gif");
-        enemy1 = new Texture("enemy2.png");
-        enemy2 = new Texture("enemy3.png");
 
         scoreFont = new BitmapFont();
         scoreFont.setColor(Color.WHITE);
         timeFont = new BitmapFont();
         timeFont.setColor(Color.WHITE);
 
+//      enemy1
+
+        animationFrames = new Texture[2];
+        animationFrames[0] = new Texture("enemy2.png");
+        animationFrames[1] = new Texture("enemy4.png");
+        animation = new Animation(1f/2f, animationFrames);
+
+////      enemy2
+
+        animationFrames2 = new Texture[2];
+        animationFrames2[0] = new Texture("enemy2.png");
+        animationFrames2[1] = new Texture("enemy3.png");
+        animation2 = new Animation(1f/2f, animationFrames2);
     }
 
     /**
@@ -52,6 +67,7 @@ public class Enemies {
     public void updateAndRender(float delta, SpriteBatch batch){
         timeHelper += Gdx.graphics.getDeltaTime();
         time += Gdx.graphics.getDeltaTime();
+        elapsedTime+=Gdx.graphics.getRawDeltaTime();
         int timer = (int) Math.floor(time);
         if(timeHelper > 1) {
             if (Math.abs(enemyPosition.x - 105) < 15 || Math.abs(enemy2Position.x - 105) < 15) {
@@ -71,8 +87,10 @@ public class Enemies {
         batch.draw(clouds, Gdx.graphics.getWidth() - cloudMove, (Gdx.graphics.getHeight() - 200), 150, 100);
         cloudMove += 1;
 
-        batch.draw(enemy1, enemyPosition.x, enemyPosition.y, enemyWidth, enemyLength);
-        batch.draw(enemy2, enemy2Position.x, enemy2Position.y, enemyWidth, enemyLength);
+        batch.draw((Texture) animation.getKeyFrame(elapsedTime, true), enemyPosition.x, enemyPosition.y, 20, 50);
+        batch.draw((Texture) animation2.getKeyFrame(elapsedTime, true), enemy2Position.x, enemy2Position.y, 20, 50);
+//        batch.draw(enemy1, enemyPosition.x, enemyPosition.y, enemyWidth, enemyLength);
+//        batch.draw(enemy2, enemy2Position.x, enemy2Position.y, enemyWidth, enemyLength);
         scoreFont.draw(batch, "score: "+ score, Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-scoreFont.getCapHeight());
         timeFont.draw(batch, "time:"+ timer, Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-3*scoreFont.getCapHeight());
     }

@@ -44,6 +44,7 @@ public class Character {
         for(int i = 0; i<2; i++){
             for(int j = 0; j<2; j++){
                 animationFrames[index++] = tmpFrames[i][j];
+                System.out.println(tmpFrames[i][j]);
             }
         }
 
