@@ -171,5 +171,9 @@ public class Enemies {
     public void setSpeed(int speed) {
         this.speed = speed;
     }
+
+    public void setTime(float time) {
+        this.time = time;
+    }
 }
 
