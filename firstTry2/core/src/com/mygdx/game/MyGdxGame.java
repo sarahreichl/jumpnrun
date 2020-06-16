@@ -27,11 +27,6 @@ public class MyGdxGame extends Game {
 	@Override
 	public void create () {
 
-		music = Gdx.audio.newSound(Gdx.files.internal("starShoppingInstrumental.mp3"));
-		//music.setLooping(true);
-		music.loop();
-		//sound.dispose();
-
 		batch = new SpriteBatch();
 		this.setScreen(new startScreen(this));
 		this.scrollingBackground = new ScrollingBackground();

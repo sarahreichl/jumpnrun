@@ -3,6 +3,7 @@ package com.mygdx.game;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -13,6 +14,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 public class startScreen implements Screen  {
     private Stage stage;
     private Game game;
+
+    Sound music;
 
     /**
      * - erstellt Startscreen
@@ -35,6 +38,11 @@ public class startScreen implements Screen  {
     public void render(float delta) {
 
         if(Gdx.input.justTouched()){
+            music = Gdx.audio.newSound(Gdx.files.internal("music.mp3"));
+            //music.setLooping(true);
+            music.loop();
+            //sound.dispose();
+
             game.setScreen(new GameScreen((MyGdxGame) game));
         }
         Gdx.gl.glClearColor(0,0,0,1);

@@ -3,6 +3,7 @@ package com.mygdx.game;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -15,12 +16,18 @@ public class endScreen implements Screen {
     private Stage stage;
     private Game game;
 
+    Sound music;
+
     /**
      * - legt das design des Endgames fest
      * - generiert button zum wiederholen
      * @param game
      */
     public endScreen(MyGdxGame game) {
+        //music = Gdx.audio.newSound(Gdx.files.internal("music.mp3"));
+        //music.setLooping(true);
+        //sound.dispose();
+
         this.game = game;
         stage = new Stage();
         Label.LabelStyle font1 = new Label.LabelStyle(new BitmapFont(), Color.WHITE);
