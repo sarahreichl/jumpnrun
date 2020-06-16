@@ -95,3 +95,4 @@ Netbeans, draw.io, VS Code
 | Java Doc                                | 09.06 | 15:30-17:30 |
 | Music                                   | 10.06 | 18:00-21:00 |
 | Update Scrolling Background and Enemies | 14.06 | 15:00-16:00 |
+| Timer                                   | 14.06 | 16:00-16:30 |

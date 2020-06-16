@@ -25,6 +25,8 @@ public class Enemies {
     BitmapFont scoreFont;
     int speed = 400;
     float timeHelper = 0;
+    BitmapFont timeFont;
+    float time = 0;
 
     /**
      * - einfügen der Bilder für Enemies und Wolken im Hintergrund
@@ -38,6 +40,9 @@ public class Enemies {
 
         scoreFont = new BitmapFont();
         scoreFont.setColor(Color.WHITE);
+        timeFont = new BitmapFont();
+        timeFont.setColor(Color.WHITE);
+
     }
 
     /**
@@ -46,6 +51,8 @@ public class Enemies {
      */
     public void updateAndRender(float delta, SpriteBatch batch){
         timeHelper += Gdx.graphics.getDeltaTime();
+        time += Gdx.graphics.getDeltaTime();
+        int timer = (int) Math.floor(time);
         if(timeHelper > 1) {
             if (Math.abs(enemyPosition.x - 105) < 15 || Math.abs(enemy2Position.x - 105) < 15) {
                 score++;
@@ -66,8 +73,8 @@ public class Enemies {
 
         batch.draw(enemy1, enemyPosition.x, enemyPosition.y, enemyWidth, enemyLength);
         batch.draw(enemy2, enemy2Position.x, enemy2Position.y, enemyWidth, enemyLength);
-        scoreFont.draw(batch, "score: "+ score, Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-scoreFont.getCapHeight() );
-
+        scoreFont.draw(batch, "score: "+ score, Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-scoreFont.getCapHeight());
+        timeFont.draw(batch, "time:"+ timer, Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-3*scoreFont.getCapHeight());
     }
 
     //Paddlesbewegen

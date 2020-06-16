@@ -38,7 +38,7 @@ public class GameScreen extends ScreenAdapter {
 
         game.batch.end();
 
-
+//      Death Screen (Teresa & Julia)
         if(Math.abs(game.enemies.getEnemyY()-game.character.getCharacterY()) < 30 && Math.abs(game.enemies.getEnemyX()-game.character.getCharacterX()) < 30){
             game.enemies.setI(Gdx.graphics.getWidth());
             game.enemies.setJ(Gdx.graphics.getWidth());
