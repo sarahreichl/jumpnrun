@@ -82,6 +82,7 @@ Netbeans, draw.io, VS Code
 | --------------------------------------- | ----- | ----------- |
 | elaborate idea                          | 05.05 | 15:30-18:00 |
 | Introduction LibGDX                     | 12.05 | 15:30-18:00 |
+| Searching for images                    | 13.05 | 15:00-17:00 |
 | Enemies                                 | 14.05 | 15:00-18:00 |
 | Enemies                                 | 15.05 | 15:30-18:30 |
 | Character                               | 16.05 | 12:00-14:00 |
@@ -96,3 +97,4 @@ Netbeans, draw.io, VS Code
 | Music                                   | 10.06 | 18:00-21:00 |
 | Update Scrolling Background and Enemies | 14.06 | 15:00-16:00 |
 | Timer                                   | 14.06 | 16:00-16:30 |
+| enemy movement                          | 15.06 | 17:00-18:30 |
