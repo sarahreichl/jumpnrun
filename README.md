@@ -63,6 +63,7 @@ Netbeans, draw.io, VS Code
 - Score
 - Fixing End Screen
 - Fixing Score
+- Fixing Bugs
 
 2. Julia:
 

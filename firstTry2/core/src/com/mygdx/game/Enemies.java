@@ -46,14 +46,12 @@ public class Enemies {
         timeFont.setColor(Color.WHITE);
 
 //      enemy1
-
         animationFrames = new Texture[2];
-        animationFrames[0] = new Texture("enemy5.png");
-        animationFrames[1] = new Texture("enemy4.png");
+        animationFrames[0] = new Texture("enemy1.png");
+        animationFrames[1] = new Texture("enemy2.png");
         animation = new Animation(1f/2f, animationFrames);
 
-////      enemy2
-
+//      enemy2
         animationFrames2 = new Texture[2];
         animationFrames2[0] = new Texture("enemy2.png");
         animationFrames2[1] = new Texture("enemy3.png");
