@@ -9,8 +9,8 @@ public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.vSyncEnabled = true;
-		//config.fullscreen = true;
-		config.title = "My first Game";
+//		config.fullscreen = true;
+		config.title = "Flying Bat";
 		config.addIcon("badLogic.jpg", Files.FileType.Internal);
 		new LwjglApplication(new MyGdxGame(), config);
 	}

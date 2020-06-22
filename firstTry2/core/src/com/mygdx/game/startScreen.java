@@ -2,6 +2,7 @@ package com.mygdx.game;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Color;
@@ -30,12 +31,21 @@ public class startScreen implements Screen  {
         table.center();
         table.setFillParent(true);
         Label playText = new Label("PLAY", font);
+        Label rules = new Label("press R for rules",font);
         playText.setFontScale(3);
-        table.add(playText).expandX();
+        table.add(playText).pad(0,250,0,0);
+        table.add(rules).pad(400,150,0,0);
         stage.addActor(table);
     }
     @Override
     public void render(float delta) {
+        if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)) {
+            Gdx.app.exit();
+        }
+        if (Gdx.input.isKeyJustPressed(Input.Keys.R)) {
+            game.setScreen(new Rules((MyGdxGame) game));
+        }
+
 
         if(Gdx.input.justTouched()){
             music = Gdx.audio.newSound(Gdx.files.internal("music.mp3"));

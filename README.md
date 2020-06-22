@@ -64,6 +64,9 @@ Netbeans, draw.io, VS Code
 - Fixing End Screen
 - Fixing Score
 - Fixing Bugs
+- Timer
+- enemy Movement
+- rules
 
 2. Julia:
 
@@ -99,3 +102,4 @@ Netbeans, draw.io, VS Code
 | Update Scrolling Background and Enemies | 14.06 | 15:00-16:00 |
 | Timer                                   | 14.06 | 16:00-16:30 |
 | enemy movement                          | 15.06 | 17:00-18:30 |
+| rules                                   | 22.06 | 10:30-12:00 |
