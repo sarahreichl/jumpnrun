@@ -40,7 +40,7 @@ public class Enemies {
     public Enemies(){
         enemyPosition = new Vector2(Gdx.graphics.getWidth(), 160.0f);
         enemy2Position = new Vector2(Gdx.graphics.getWidth() , 190.0f);
-        clouds = new Texture("clouds5.png");
+        clouds = new Texture("clouds4.gif");
 
         scoreFont = new BitmapFont();
         scoreFont.setColor(Color.WHITE);
